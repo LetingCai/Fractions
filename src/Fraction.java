@@ -128,11 +128,13 @@ public class Fraction
      */
     private int gcf(int n, int d) {
         int i=9;
-        while (!(n % i == 0 && d % i == 0)){
-            if(i<=0){
-                return 1;
+        for (int x = 100; x>=0; x--) {
+            while (!(n % i == 0 && d % i == 0)) {
+                if (i <= 0) {
+                    return 1;
+                }
+                i--;
             }
-            i--;
         }
         return i;
     }
